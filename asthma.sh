@@ -6,4 +6,5 @@ sos run ~/finemapping/2020_finemap_test_data/SuSiE_test.ipynb \
     --region_file ~/finemapping/2020_finemap_test_data/0asthma.clumped_region \
     --sumstats_path ~/finemapping/2020_finemap_test_data/ukb_imp_v3.Asthma_casesbyICD10codesANDselfreport_controlsbyselfreportandicd10_noautoimmuneincontrols.fastGWA.snp_stats.gz \
     --N 230411 \
+    --pipprob 0.2 \
     $JOB_OPT
