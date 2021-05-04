@@ -1,10 +1,11 @@
 #!/bin/bash
 
-sos run ~/finemapping/2020_finemap_test_data/SuSiE_test-copy.ipynb \
+sos run ~/bio/fine-mapping/SuSiE_RSS.ipynb \
     --cwd ~/finemapping/jazf1 \
-    --region_dir /gpfs/gibbs/pi/dewan/data/UKBiobank/results/region_extraction/asthma \
-    --region_file ~/finemapping/jaz_file.clumped_region \
+    --region_dir ~/jazf1/extraction_trial \
+    --region_file ~/jazf1/jazf1_gene.clumped_region \
     --sumstats_path /gpfs/gibbs/pi/dewan/data/UKBiobank/results/FastGWA_results/results_imputed_data/asthma/Asthma_casesbyICD10codesANDselfreport_controlsbyselfreportandicd10_noautoimmuneincontrols_forbolt030720_ASTHMA.fastGWA.snp_stats.gz \
-    --N 230411 \
     --pip_cutoff 0.1 \
+    --container_lmm  /gpfs/gibbs/pi/dewan/data/UKBiobank/lmm.sif \
+    --container_marp /gpfs/gibbs/pi/dewan/data/UKBiobank/marp.sif \
     $JOB_OPT
